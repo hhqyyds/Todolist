@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.todolist-panel{
+    width: 25em;
+    min-height: 25em;
+    border: 3px solid #aaa;
+    box-shadow: 2px 2px 2px #aaa;
+}
+
+.input-pane{
+    padding: 9px 1em;
+    display: flex;
+    height: 2em;
+}
+
+.input-pane>input{
+    flex: 1 1 8em;
+}
+
+.input-pane>button{
+    width: 2.5em;
+}
