@@ -48,5 +48,9 @@ function renderInputPane(todoItems){
     });
     //Slet btnEl= document.querySelector("#todolist #add-btn");
 }
-renderTodoItemList(todoItems)
+//renderTodoItemList(todoItems)
 renderInputPane(todoItems)
+
+
+
+ 
