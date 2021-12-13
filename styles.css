@@ -8,10 +8,13 @@ body{
     min-height: 25em;
     border: 3px solid #aaa;
     box-shadow: 2px 2px 2px #aaa;
+    border-width: 2em 3px 3px;
+    border-style: solid;
+    border-color: yellowgreen
 }
 
 .input-pane{
-    padding: 9px 1em;
+    padding: 2em 1em;
     display: flex;
     height: 2em;
 }
@@ -26,13 +29,20 @@ body{
     flex: 1 1 8em;
 }
 
-.input-pane>button{
+.input-pane>button[id="his-btn"]{
     width: 2.5em;
+    background-color:whitesmoke;
 }
 
+.input-pane>button[id="add-btn"]{
+    width: 2.5em;
+    background-color:whitesmoke;
+    font-weight: 700;
+}
 .list-pane>.todo-item{
     display: flex;
     margin: 0.5em 0 0.5em 0;
+    border-bottom: 5px solid wheat;
 }
 
 .list-pane>.todo-item>.title{
@@ -40,7 +50,20 @@ body{
 
 }
 
-.important,.delete{
+.important{
+    width: 1.3em;
+    text-align: center;
+    border: 2px solid #aaa;
+    color: #ccc;
+    font-weight: 900;
+}
+
+.important.open{
+    color:red;
+    
+}
+
+.delete{
     width: 1.3em;
     text-align: center;
     border: 2px solid #aaa;
@@ -50,9 +73,10 @@ body{
 
 
 
+
 .list-pane {
     padding: 9px 1em;
-    min-height: 40em;
+    height: 2em;
 }
 
 .list-pane>.per-pane{
@@ -67,4 +91,19 @@ body{
 .per-pane>button{
     width: 3em;
     height: 3em;
+}
+
+
+.input-pane #his-btn{
+    background-color:whitesmoke;
+}
+
+.input-pane #his-btn.open{
+    background-color: green;
+}
+
+.title{
+    font-size: 14px;
+    letter-spacing: 2px;
+    word-break: break-all;
 }
