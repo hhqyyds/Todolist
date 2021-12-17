@@ -3,7 +3,14 @@
   <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
+
   <div id="todolist" class="todolist-panel">
+    <h3 style="text-align: center;
+              background-color: yellowgreen;
+              margin: -1px;
+              font-size: xx-large;">
+    My Todolist
+    </h3>
     <div class="input-pane">
       <input type="text" >
       <button id="add-btn">+</button>
@@ -13,8 +20,8 @@
     <div id="listpane" class="list-pane">
       <div class="per-pane">
         <input type="checkbox" >
-        <input type="text">
-        <button id="important-btn">!</button>
+        <input type="text">                              <!-- 这里新增的语句和js里定义的函数一样也可以实现待办清单的框架 -->
+        <button id="important-btn">!</button>            <!--我只是尝试着模仿写了写，最终的按钮功能是在js里实现的-->
         <button id="delete-btn">x</button>
   </div>
 
