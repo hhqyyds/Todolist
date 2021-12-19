@@ -21,7 +21,19 @@ function renderTodoItemList(todoItems,finishedItems){
        })
 
        let contentEl =document.createElement("div");
-       contentEl.className="content"
+       contentEl.className="content";
+       contentEl.addEventListener("dblclick",(e)=>{
+           let updateEl=document.createElement("input");
+           contentEl.innerText="";
+           contentEl.append(updateEl);
+           updateEl.addEventListener("keydown",(e)=>{                   //双击修改待办事项，回车确认//
+               if (e.code == "Enter"&&updateEl.value!=""){
+                    contentEl.innerText=updateEl.value
+                    todoItems[i].content=updateEl.value     
+               }
+               
+           })
+       })
        
        let importanceEl =document.createElement("div");
        importanceEl.className="important";
@@ -98,6 +110,8 @@ function renderInputPane(todoItems,finishedItems){
             })){
                 inputEl.value="";    //新增：输入框中若没有输入内容，则不会添加事项//
             }                        //点击添加标志，输入框的内容会加到下面的待办清单里，//
+        }else{
+            alert("Nothing!!!")
         }                            //并且新增加了输入框的内容自动清除功能以便再次输入//
                                      //在样式表中还增加了换行功能，输入文字过多可自动换行//
 
